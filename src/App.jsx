@@ -13,22 +13,38 @@ function App() {
   }
 
   const decrementCounter = () => {
-    setCounter(counter - 1)
+    // Check if the counter is greater than 0 before decrementing
+    if (counter > 0) {
+      // setCounter(counter - 1)
+      setCounter(prevCounter => prevCounter - 1)
+    }
   }
 
   return (
     <>
-      <h1>React Counter</h1>
-      <h2>Updating the counter value to demonstrate the use of useSate Hook🪝: {counter}</h2>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', justifyContent: 'space-between' }}>
+        <div>
+          <h1>React Counter</h1>
+          <h2>Updating the counter value to demonstrate the use of useSate Hook🪝: {counter}</h2>
 
-      <button
-        onClick={incrementCounter}
-      >➕ {counter}</button>
+          <button style={{ margin: '5px' }} onClick={incrementCounter}>
+            ➕ {counter}
+          </button>
 
-      <button
-        onClick={decrementCounter}
-      >➖{counter}</button>
-      <p>Demo footer value: {counter}</p>
+          <button style={{ margin: '5px' }} onClick={decrementCounter}>
+            ➖{counter}
+          </button>
+
+          <p>Demo value: {counter}</p>
+
+          <p>Click the buttons to increment or decrement the counter value. The counter value will not go below 0.</p>
+        </div>
+        <footer style={{ textAlign: 'center', padding: '10px', borderTop: '1px solid #ccc' }}>
+          {/* <footer style={{ textAlign: 'center', padding: '10px', position: 'fixed', bottom: '0', width:'100%', borderTop: '1px solid #ccc' }}> */}
+          {/* <footer style={{ textAlign: 'center', padding: '10px', position: 'fixed', bottom: '0', width: '100%', borderTop: '1px solid #ccc' }}> */}
+          <p>React Counter App - Created by @developer_ankitt</p>
+        </footer>
+      </div>
     </>
   )
 }
