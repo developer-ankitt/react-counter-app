@@ -8,7 +8,7 @@ To run this project locally, follow these steps:
 
 1. Clone this repository:
    
-   git clone https://github.com/your-username/react-counter-app.git
+   git clone https://github.com/developer-ankitt/react-counter-app.git
 Navigate to the project directory:
 
 cd react-counter-app
@@ -44,7 +44,7 @@ Update the package.json file with the following scripts:
 Deploy to GitHub Pages:
 
 npm run deploy
-Your app will be available at https://your-username.github.io/react-counter-app.
+Your app will be available at https://developer-ankitt.github.io/react-counter-app.
 
 Contributing
 Feel free to contribute to this project. Fork the repository, make your changes, and submit a pull request.
