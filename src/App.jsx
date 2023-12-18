@@ -34,7 +34,7 @@ function App() {
         <p>Click the buttons to increment or decrement the counter value. The counter value will not go below 0.</p>
 
         <footer style={{ borderTop: '1px solid #ccc', marginTop: '20px' }}>
-       <p>React Counter App - Created by <a href="https://https://www.instagram.com/developer_ankitt/.com" target="_blank" rel="noopener noreferrer">@developer_ankitt</a></p>
+       <p>React Counter App - Created by <a href="https://www.instagram.com/developer_ankitt/" target="_blank" rel="noopener noreferrer">developer_ankitt</a></p>
           {/* <p>React Counter App - Created by @devloper_ankitt</p> */}
         </footer>
       </div>
