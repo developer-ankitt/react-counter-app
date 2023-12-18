@@ -1,51 +1,44 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
+// ... (other import statements and code)
 
+function App() {
   const [counter, setCounter] = useState(0)
 
-  //let counter = 15
-
   const incrementCounter = () => {
-    //counter = counter + 1
     setCounter(prevCounter => prevCounter + 1)
   }
 
   const decrementCounter = () => {
     // Check if the counter is greater than 0 before decrementing
     if (counter > 0) {
-      // setCounter(counter - 1)
       setCounter(prevCounter => prevCounter - 1)
     }
   }
 
   return (
-    <>
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', justifyContent: 'space-between' }}>
-        <div>
-          <h1>React Counter</h1>
-          <h2>Updating the counter value to demonstrate the use of useSate Hook🪝: {counter}</h2>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+      <div style={{ boxShadow: '10px 10px 18px 5px rgba(0, 0, 0, 0.4)', padding: '20px', borderRadius: '8px', textAlign: 'center', width: '300px' }}>
+        <h1>React Counter</h1>
+        <h2>Updating the counter value to demonstrate the use of useState Hook🪝 {counter}</h2>
 
-          <button style={{ margin: '5px' }} onClick={incrementCounter}>
-            ➕ {counter}
-          </button>
+        <button style={{ padding: '10px', margin: '5px' }} onClick={decrementCounter}>
+          ➖{counter}
+        </button>
 
-          <button style={{ margin: '5px' }} onClick={decrementCounter}>
-            ➖{counter}
-          </button>
+        <button style={{ padding: '10px', margin: '5px' }} onClick={incrementCounter}>
+          ➕ {counter}
+        </button>
 
-          <p>Demo value: {counter}</p>
+        <p>Click the buttons to increment or decrement the counter value. The counter value will not go below 0.</p>
 
-          <p>Click the buttons to increment or decrement the counter value. The counter value will not go below 0.</p>
-        </div>
-        <footer style={{ textAlign: 'center', padding: '10px', borderTop: '1px solid #ccc' }}>
-          {/* <footer style={{ textAlign: 'center', padding: '10px', position: 'fixed', bottom: '0', width:'100%', borderTop: '1px solid #ccc' }}> */}
-          {/* <footer style={{ textAlign: 'center', padding: '10px', position: 'fixed', bottom: '0', width: '100%', borderTop: '1px solid #ccc' }}> */}
-          <p>React Counter App - Created by @developer_ankitt</p>
+        <footer style={{ borderTop: '1px solid #ccc', marginTop: '20px' }}>
+       <p>React Counter App - Created by <a href="https://https://www.instagram.com/developer_ankitt/.com" target="_blank" rel="noopener noreferrer">@developer_ankitt</a></p>
+          {/* <p>React Counter App - Created by @devloper_ankitt</p> */}
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
